@@ -1,0 +1,25 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.container-fluid {
+   background-color: grey;
+   height: 100vh;
+   line-height: 2;
+}
+form {
+   width: 450px;
+   background-color: rgb(226, 220, 220);
+   padding: 10px;
+}
+input {
+}
+.main-btn {
+   border: 1 px solid blue;
+   background-color: blue;
+   color: beige;
+   padding: 5px;
+   font-size: 12px;
+   border-radius: 5px;
+}
