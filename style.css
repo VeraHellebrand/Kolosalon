@@ -1,25 +1,38 @@
-*{
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
-.container-fluid {
-   background-color: grey;
-   height: 100vh;
-   line-height: 2;
+
+body {
+   background-color: rgb(153, 99, 99);
+   color: white;
 }
-form {
-   width: 450px;
-   background-color: rgb(226, 220, 220);
+
+header {
+   min-height: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    padding: 10px;
 }
-input {
+
+.container-fluid {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.main-btn {
-   border: 1 px solid blue;
-   background-color: blue;
-   color: beige;
-   padding: 5px;
-   font-size: 12px;
-   border-radius: 5px;
+
+form {
+   max-width: 450px;
+   width: 100%;
+   background-color: rgb(146, 144, 144);
+   padding: 20px;
+   margin: 20px; 
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
+
+

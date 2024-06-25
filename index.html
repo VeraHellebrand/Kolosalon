@@ -1,138 +1,146 @@
 <!DOCTYPE html>
 <html lang="cs">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>javascript</title>
-      <link rel="stylesheet" href="./style.css" />
-      <link
-         rel="stylesheet"
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      />
-   </head>
-   <body>
-      <div class="container-fluid">
-         <header>
-            <h1>WWW formulář Kolosalon. JavaScript</h1>
-         </header>
-         <main class="container">
-            <h2>Stránka Půjčovna - objednávka</h2>
-            <form class="row" action="">
-               <div class="row">
-                  <div class="col">
-                     <label for="horske">
-                        <input type="checkbox" name="checkbox" id="horske" value="500"/>
-                        horské 500 Kč/den
-                     </label>
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Javascript</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+   
+      <header class="text-center py-4">
+         <h1>Kolosalon</h1>
+         <h2 class="mb-4">Půjčovna - objednávka</h2>
+      </header>
+   <div class="container">
+      <main class="row justify-content-center ">
+         <div class="col-lg-8">
+            <form action="" class=" row g-0">
+               <!-- Checkboxy pro druhy kol -->
+               <div class="row mb-3">
+                  <div class="col-md-6">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="horske" value="500">
+                        <label class="form-check-label" for="horske">
+                           Horské 500 Kč/den
+                        </label>
+                     </div>
+                     <input type="number" class="form-control" id="horskeC" placeholder="Počet kusů">
                   </div>
-                  <div class="col">
-                     <input type="number" placeholder="počet kusů" value="" id="horskeC"/>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col">
-                     <label for="detske">
-                        <input type="checkbox" name="checkbox" id="detske" value="200"/>
-                        dětské 200 Kč/den
-                     </label>
-                  </div>
-                  <div class="col">
-                     <input type="number" placeholder="počet kusů" value="" id="detskeC"/>
+                  <div class="col-md-6">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="detske" value="200">
+                        <label class="form-check-label" for="detske">
+                           Dětské 200 Kč/den
+                        </label>
+                     </div>
+                     <input type="number" class="form-control" id="detskeC" placeholder="Počet kusů">
                   </div>
                </div>
-               <div class="row">
-                  <div class="col">
-                     <label for="silnicni">
-                        <input type="checkbox" name="checkbox" id="silnicni" value="1500"/>
-                        silniční 1500 Kč/den
-                     </label>
+               <div class="row mb-3">
+                  <div class="col-md-6">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="silnicni" value="1500">
+                        <label class="form-check-label" for="silnicni">
+                           Silniční 1500 Kč/den
+                        </label>
+                     </div>
+                     <input type="number" class="form-control" id="silnicniC" placeholder="Počet kusů">
                   </div>
-                  <div class="col">
-                     <input type="number" placeholder="počet kusů" value="" id="silnicniC"/>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col">
-                     <label for="gravel">
-                        <input type="checkbox" name="checkbox" id="gravel" value="1500" />
-                        gravel 1500 Kč/den
-                     </label>
-                  </div>
-                  <div class="col">
-                     <input type="number" placeholder="počet kusů" value="" id="gravelC"/>
+                  <div class="col-md-6">
+                     <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gravel" value="1500">
+                        <label class="form-check-label" for="gravel">
+                           Gravel 1500 Kč/den
+                        </label>
+                     </div>
+                     <input type="number" class="form-control" id="gravelC" placeholder="Počet kusů">
                   </div>
                </div>
-               <div class="row">
-                  <!-- Dny -->
-                  <label for="pocetDnu"
-                     >Počet dnů zápůjčky:
-                     <select name="pocetDnu" id="pocetDnu">
+               <!-- Počet dnů zápůjčky -->
+               <div class="row mb-3">
+                  <label for="pocetDnu" class="col-sm-4 col-form-label">
+                     Počet dnů zápůjčky:
+                  </label>
+                  <div class="col-sm-8">
+                     <select name="pocetDnu" id="pocetDnu" class="form-select">
                         <option value="den1" selected>1 den</option>
-                        <option value="den3" >3 dny</option>
+                        <option value="den3">3 dny</option>
                         <option value="den7">7 dní</option>
                         <option value="den14">14 dní</option>
                      </select>
-                  </label>
+                  </div>
                </div>
-               <div class="row">
-                  <fieldset>
-                     <legend>cyklonosič</legend>
-                     <label for="radio">
-                        <input type="radio" name="radio" id="stresni" checked />
-                        cyklonosič střešní(5% navíc z celkové ceny zápůjčky)
-                     </label>
-                     <label for="radio">
-                        <input type="radio" name="radio" id="tazny" />
-                        cyklonosič na tažné zařízení <br />
-                        (+ 10 procent z celkové ceny zápůjčky navíc)
-                     </label>
-                     <label for="radio">
-                        <input type="radio" name="radio" id="zadny" />
-                        není třeba cyklonosič
-                     </label>
+               <!-- Cyklonosič -->
+               <div class="row mb-3">
+                  <fieldset class="col">
+                     <legend class="mb-3">Cyklonosič</legend>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="cyklonosic" id="stresni" checked>
+                        <label class="form-check-label" for="stresni">
+                           Cyklonosič střešní (5% navíc z celkové ceny zápůjčky)
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="cyklonosic" id="tazny">
+                        <label class="form-check-label" for="tazny">
+                           Cyklonosič na tažné zařízení (10% navíc z celkové ceny zápůjčky)
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="cyklonosic" id="zadny">
+                        <label class="form-check-label" for="zadny">
+                           Není třeba cyklonosič
+                        </label>
+                     </div>
                   </fieldset>
                </div>
-               <div class="row">
-                  <div class="col">
-                     <button class="main-btn">výpočet ceny zápůjčky</button>
+               <!-- Tlačítka -->
+               <div class="row mb-3">
+                  <div class="col-md-6">
+                     <button type="button" class="btn btn-primary">Výpočet ceny zápůjčky</button>
                   </div>
-                  <div class="col">
-                     <p>celková cena: <span id="celkCena" value=""></span></p>
+                  <div class="col-md-6">
+                     <p>Celková cena: <span id="celkCena"></span> Kč</p>
                   </div>
                </div>
-               <div class="row">
-                  <label for="maxDam">
-                     <input
-                        type="number"
-                        name="max cena"
-                        placeholder="maxcena"
-                        id="maxDam"
-                     />
+               <!-- Maximální cena -->
+               <div class="row mb-3">
+                  <label for="maxDam" class="col-sm-4 col-form-label">
+                     Maximální cena:
                   </label>
+                  <div class="col-sm-8">
+                     <input type="number" class="form-control" id="maxDam" placeholder="Maximální cena">
+                  </div>
                </div>
-               <!-- email -->
-               <div class="row">
-                  <label for="">Email:</label>
-                  <input
-                     class="email"
-                     type="email"
-                     name="email"
-                     id="email"
-                     placeholder="povinné pole"
-                     value=""
-               
-                  />
+               <!-- Email -->
+               <div class="row mb-3">
+                  <label for="email" class="col-sm-4 col-form-label">
+                     Email:
+                  </label>
+                  <div class="col-sm-8">
+                     <input type="email" class="form-control email" id="email" placeholder="Povinné pole">
+                  </div>
                </div>
-               <div class="row text-center">
-                  <button  class="submit-btn">
-                     Odeslat
-                  </button>
+               <!-- Odeslat formulář -->
+               <div class="row mb-3">
+                  <div class="col text-center">
+                     <button type="button" class="btn btn-success submit-btn">Odeslat</button>
+                  </div>
                </div>
             </form>
-         </main>
-      </div>
+         </div>
+      </main>
+      <Footer>
+         <footer>
+            <h4>Javascript, samostatné cvičení</h4>
+            &copy Věra Hellebrand 2024
+         </footer>
+      </Footer>
+   </div>
 
-      <script src="./script.js"></script>
-   </body>
+   <script src="./script.js"></script>
+</body>
 </html>
